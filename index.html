@@ -1,114 +1,827 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- [if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> [endif]>
+[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> [endif]
+[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> [endif]
+[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> [endif] -->
+<!-- [if gt IE 9]> -->
+<!--
+<html class="no-js" lang="en">
+<![endif]-->
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeautySalon.</title>
-    <link rel="stylesheet" href="assets/fonts/style.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Metas Page details-->
+  <title>Eduardo Alexandre - Personal Portfolio</title>
+  <meta name="description" content="Site Pessoal">
+  <meta name="author" content="Eduardo Developer">
+  <!-- Mobile Specific Metas-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--main style-->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+  <!--google font style-->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!--font-family: 'Metrophobic', serif;-->
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,400italic,600italic' rel='stylesheet'
+    type='text/css'>
+  <!--font-family: 'Open Sans', sans-serif;-->
+  <!-- font icon css style-->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
-    <body>
-        <header id="header">
-            <nav class="container">
-                <a class="logo" href="#">Beauty<span>Salon</span>.</a>
-                <div class="menu">
-                    <ul class="grid">
-                        <li><a class="title" href="#home">Início</a></li>
-                        <li><a class="title" href="#about">Sobre</a></li>
-                        <li><a class="title" href="#services">Serviços</a></li>
-                        <li><a class="title" href="#testimonials">Depoimentos</a></li>
-                        <li><a class="title" href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="toggle icon-menu"></div>
-                <div class="toggle icon-close"></div>
-            </nav>
-        </header>
 
-        <main>
-            <section class="section" id="home">
-                <div class="container grid">
-                    <div class="image">
-                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="Mulher sorrin do pendeteando os cabelos"/>                   
-                    </div>
-                    <div class="text">
-                        <h2 class="title">Saúde natural para os seus cabelos</h2>
-                        <p>Um salão exclusivo em Juiz de Fora, especializado em tratamentos naturais</p>
-                        <a class="button" href="#">Agendar um horário</a>
-                    </div>
-                </div>
-            </section>
-            <div class="divider-1">
-                <!-- SOBRE -->
-                <section class="section" id="about">
-                    <div class="container grid">
-                        <div class="image">
-                            <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="3 mulheres sorrindo"/>
-                        </div>
-                        <div class="text">
-                            <h2 class="title">Sobre nós</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur rem 
-                                aperiam repellendus voluptatibus natus laboriosam quos eligendi, delectus 
-                                perferendis. Consequuntur neque obcaecati aperiam perspiciatis earum fuga eum. 
-                                Esse, placeat!
-                            </p> <br>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui pariatur quam maiores 
-                                nostrum. Eius numquam repudiandae quos, ipsum nam asperiores reiciendis recusandae 
-                                doloribus ducimus ullam eligendi, accusantium incidunt ut necessitatibus!
-                            </p><br>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus ad, cum enim 
-                                mollitia neque porro incidunt corrupti voluptates deserunt et architecto eaque 
-                                facilis voluptatibus velit tempora labore quae nam temporibus?
-                            </p><br>
-                        </div>
-                    </div>
-                </section>
+<body onLoad="load()" onUnload="GUnload()">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status"></div>
+  </div>
+  <!--wrapper start-->
+  <div class="wrapper noGap" id="wrapper">
 
-                <div class="divider-2">
-
-                </div>
-
-            <section class="section" id="services">
-                <div class="container grid">
-                    <header>
-                        <h2 class="title">Serviços</h2>
-                        <p>Com mais de 10 anos no mercado, o <strong>BeautySalon</strong> já conquistou
-                         clientes de inúmeros países com seus tratamentos exclusivos e totalmente naturais.</p>
-                    </header>
-                        <div class="cards grid">
-                            <div class="card">
-                            <i class="icon-woman-hair"></i>
-                            <h3 class="tile">Terapia Capilar</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut 
-                                magni maxime dignissimos quis nulla suscipit, consequuntur porro veritatis unde 
-                                assumenda officia quos sit ex. Labore, deleniti. Quaerat, corporis non!
-                            </p>
-                        </div>
-                        <div class="card">
-                            <i class="icon-trim"></i>
-                            <h3 class="tile">Cortes</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, cum. Sed a pariatur
-                                necessitatibus quaerat dignissimos iusto magnam. Temporibus quia aperiam quam 
-                                voluptatibus commodi perspiciatis magni, minima sapiente itaque distinctio?
-                                </p>
-                        </div>
-                        <div class="card">
-                            <i class="icon-cosmetic"></i>
-                            <h3 class="tile">Tratamentos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sit, deleniti 
-                                repellat dolorem sequi nam non doloribus ex veniam enim error maiores officiis aut 
-                                cupiditate commodi sint, eaque accusamus. Repudiandae?
-                            </p>
-                        </div>
+    <!--Header start -->
+    <header>
+      <!--menu start-->
+      <div class="menu">
+        <a href="#" class="nav-icon" id="nav-show"><i class="fa fa-bars"></i></a>
+        <div class="navbar-wrapper">
+          <div class="container">
+            <div class="navwrapper">
+              <div class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                  <!--<div class="logo">logo</div> -->
+                  <div class="navArea"><a href="#" class="closeMenu"><i class="fa fa-times"></i></a>
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                      </button>
+                      <!-- <a class="navbar-brand" href="#">Menu</a>  -->
                     </div>
+                    <div class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li class="menuItem active"><a href="#wrapper">Home</a></li>
+                        <li class="menuItem"><a href="#aboutus">About Me</a></li>
+                        <li class="menuItem"><a href="#skillset">Skills</a></li>
+                        <li class="menuItem"><a href="#experience">Experience</a></li>
+                        <li class="menuItem"><a href="#education">Education</a></li>
+                        <li class="menuItem"><a href="#ourwork">Portfolio</a></li>
+                        <li class="menuItem"><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-            </section>
-        </main>
-        <script type="text/javascript" src="/js/main.js"></script>
-    </body>
+              </div>
+            </div>
+            <!-- End Navbar -->
+          </div>
+        </div>
+      </div>
+      <!--menu end-->
+      <!--banner start-->
+      <div class="banner row" id="banner">
+        <div class="bannerText">
+          <h1>I'm Eduardo Alexandre</h1>
+          <h3>- Brazil -</h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%">
+          <!--background slide show start-->
+          <div class="slide">
+            <img src="images/header-image/back01.jpg" alt="image01"> </div>
+          <div class="slide">
+            <img src="images/header-image/image02.jpg" alt="image01"> </div>
+          <!--background slide show end-->
+        </div>
+      </div>
+      <!--banner end-->
+
+    </header>
+    <!--Header end -->
+
+    <!--about us start-->
+    <section class="aboutus" id="aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2>About me</h2>
+              <h3>ATecnologia é o que movimenta o Mundo!</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="images/edu.jpg" alt=""></div>
+          <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
+            <h5>Eduardo Alexandre</h5>
+            <h4>Fullstack Developer &amp; Design</h4>
+            <p>Opaa...Bem vindo! Sou da cidade de Juiz de Fora - MG, programador, criador de Apps, professor voluntário
+              e palestrante. Atualmente desenvolvendo
+              com Tecnologias Microsoft e apaixonado por Javascript (Tudo S2).
+              Fui desenvolvedor durante 5 anos na CTK Soluções, empresa que fundei com um amigo/sócio, que hoje presto
+              alguns serviços como
+              freelancer. Passo a maior parte do meu tempo na frente do computador, estudando novas tecnologias e
+              criando coisas,
+              ao fazer isso, me sinto motivado em ajudar pessoas com dicas e compartilhando meu conhecimento, e tudo
+              isso só é
+              possível com vários litros de Café por dia...rsrs</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--about us end-->
+    <!--Skillset start -->
+    <section id="skillset" class="skillset">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2>Skills &amp; Expertice</h2>
+              <h3>I can say i’m quite good at</h3>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-6 col-sm-12 media">
+              <p>O mercado busca cada vez mais especialistas proativos, curiosos e que tenham visão de mercado.
+                As empresas esperam que o profissional de TI conheça o negócio, e que utilize suas habilidades técnicas
+                para
+                encontrar soluções e diminuir custos, alavancar os lucros e garantir mais segurança nos procedimentos.
+                Por isso os estudos nunca acabam, é preciso ficar atento as mudanças e se qualificar para novos desafios
+              </p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="skillbar clearfix " data-percent="100%">
+                <div class="skillbar-title"><span>Segurança da Informação</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="100%">
+                <div class="skillbar-title"><span>Normas ambientais</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="100%">
+                <div class="skillbar-title"><span>Javascript</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="90%">
+                <div class="skillbar-title"><span>Banco de Dados</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="80%">
+                <div class="skillbar-title"><span>Ruby</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="100%">
+                <div class="skillbar-title"><span>Corel Draw</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div> <!-- End Skill Bar -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Skillset end -->
+    <!--Work Experties start -->
+    <section id="experience" class="myexperties">
+      <div class="container">
+        <div class="heading">
+          <h2>Work Experience</h2>
+          <h3>My previous associations</h3>
+        </div>
+        <!--Works-->
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Março, 2021<br>Job Atual
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>MRS Logística</h4>
+            <h5>Information Technology Assistant</h5>
+            <p> Atuando no Desenvolvimento e manutenção de Softwares internos.</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Janeiro,2019<br>Março, 2021
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>MRS Logística</h4>
+            <h5>Syslog Operator</h5>
+            <p> Atuando no CCO (Centro de Controle Operacional) como Operador de SISLOG, realizando o
+              acompanhamento da circulação dos trens em toda a malha ferroviária, registrando informações
+              relativas às movimentações dos trens (locomotivas e vagões) e inserção de eventos adversos
+              para gerar base de dados para a tomada de decisão dos controladores e programadores na
+              otimização da circulação e alimentando indicadores para verificação de possíveis gargalos
+              no processo. Garantir as normas de segurança da informação, identificando as condições
+              inseguras na formação das composições e fazendo o registro exato dos eventos realizados.</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Junho,2018<br>Dezembro, 2018
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Manserv Facilities</h4>
+            <h5>Técnico em Meio Ambiente - Mercedes-Benz</h5>
+            <p> O Técnico em Meio Ambiente é o profissional responsável pelo levantamento e sistematização
+              de dados, informações e documentos técnicos para subsidiar a realização de estudos
+              socioambientais. Contribui no processo de elaboração de políticas ambientais, na implementação
+              e controle de programas de gerenciamento ambiental e sistemas de gestão integrada. Atua em
+              organizações públicas, privadas e não governamentais do comércio, serviços, indústria,
+              consultoria, ensino e pesquisa, abrangendo instituições de assistência técnica, pesquisa e
+              extensão rural, estações de tratamento de resíduos, empresas de licenciamento ambiental,
+              unidades de conservação ambiental, cooperativas, associações, portos e aeroportos..</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Março,2018<br>Junho, 2018
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>MRS Logística</h4>
+            <h5>Aux. Processos Administrativos</h5>
+            <p> Executar serviço de apoio administrativo nas áreas de recursos humanos, administração, comercial e
+              finanças, cumprindo as rotinas e processos, atendendo aos padrões de
+              qualidade requeridos. Executar processos administrativos em organizações industriais, dentro dos padrões
+              técnicos, éticos, de qualidade, segurança, responsabilidade social e
+              preservação ambiental.</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Janeiro,2017<br>Job Atual
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Freelancer</h4>
+            <h5></h5>Software Engineer Fullstack</h5>
+            <p>Desenvolvedor Fullstack , Javascript (React/React Native, Angular JS, Vue JS), Flutter, .Net, PHP
+              Laravel, Ruby on
+              Rails, soluções em Segurança da
+              Informação, Design/Arte
+              Finalista</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Junho,2012<br>Dezembro 2016
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>ctk Soluções em TI</h4>
+            <h5>Senior Developer</h5>
+            <p>Muito além de criar sistemas, desenvolvedores devem dominar mais de uma linguagem, a fim de programar
+              sistemas empregando também as chamadas linguagens auxiliares
+              (a exemplo do Javascript quando utilizado como linguagem auxiliar ao HTML).
+              Além disso, devem ser capazes de criar softwares tendo em vista a cadeia completa de desenvolvimento:
+              concepção, implementação, operação e manutenção.
+              Suas criações precisam focar sempre em problemas reais, impactando o dia a dia da empresa e viabilizando a
+              inovação.</p>
+          </div>
+        </div>
+    </section>
+    <!--Work Experties end -->
+    <!--Education & diploma start -->
+    <section id="education" class="educationdiploma">
+      <div class="container">
+        <div class="heading">
+          <h2>Formação &amp; Diplomas</h2>
+          <h3>Orgulho!!!</h3>
+        </div>
+
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Março,2017<br>Dezembro 2021
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Bacharel em Sistemas de Informação</h4>
+            <h5>Universidade Salgado de Oliveira</h5>
+            <p>O bacharel em Sistemas de Informação é responsável pela administração do fluxo de informações nas redes
+              de
+              computadores de uma empresa. Ele desenvolve, implementa ou adapta softwares com o objetivo de melhorar a
+              organização e acessibilidade das informações.</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Março,2014<br>Dezembro 2018
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Tecnologo em Análise e Desenvolvimento de Sistemas</h4>
+            <h5>Universidade Estácio de Sá</h5>
+            <p>O analista de sistemas é um profissional da área de Tecnologia da Informação (TI) que analisa e
+              desenvolve sistemas, mapeia processos,
+              faz a modelagem de dados e levanta os requisitos para implementar esses programas de acordo com os
+              objetivos e as regras de negócio da empresa contratante..</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Junho,2011<br>Dezembro 2012
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Técnico em Redes de Computadores e Servidores</h4>
+            <h5>Senac Juiz de Fora</h5>
+            <p>O Técnico em redes de computadores é o profissional que projeta a rede tanto na questão lógica quanto na
+              física, também realiza a instalação,
+              configuração e manutenção em redes de computadores, instala e configura roteadores e switchs. Faz a
+              implementação e administração de sistemas
+              operacionais em redes corporativas e residenciais.</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Março,2011<br>Dezembro 2012
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Técnico em Meio Ambiente</h4>
+            <h5>IFET Campus Muzambinho - MG</h5>
+            <p>O profissional Técnico em Meio Ambiente possui uma sólida base de conhecimentos tecnológicos, gerenciais
+              e humanísticos, adaptando-se a novas situações
+              buscando incentivar e participar de todas as ações e projetos locais referentes a ações de preservação do
+              meio ambiente, sensibilizar a sociedade
+              empregando argumentação e dados concretos para a preservação e boa utilização dos recursos naturais, tendo
+              sempre em vista o desenvolvimento sustentável,
+              orientar empresas, instituições, escolas, etc., com relação à legislação ambiental, identificar situações
+              de risco ambiental intervir no sentido de
+              minimizar toda situação de risco ambiental observada, acionando, se for o caso, o poder público e a
+              sociedade de modo geral, auxiliar a aplicação e
+              fiscalização da legislação ambiental, avaliar modelos de gestão ambiental, utilizados na exploração de
+              recursos naturais e nos processos produtivo
+              e elaborar e acompanhar a implementação de projetos de gestão e educação ambiental.</p>
+          </div>
+        </div>
+        <div class="row media">
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="expertiesico">
+              Junho,2006<br>Dezembro 2007
+            </div>
+          </div>
+          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <h4>Técnico em Química e Gestão Ambienteal</h4>
+            <h5>CETEPRO - Centro Técnico Profissionalizante</h5>
+            <p>O técnico em QUÍMICA é o profissional que pode realizar análises, operar processos e atuar no
+              desenvolvimento de produtos e serviços da área química e gestão
+              técnica dos processos, zelando por padrões de qualidade e pela integridade de pessoas, do meio ambiente e
+              das instalações.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Education & diploma end -->
+
+
+    <!--portfolio start-->
+    <section class="protfolio" id="ourwork">
+      <div class="container">
+        <div class="heading">
+          <h2>Portfólio</h2>
+          <h3>Litros de café diários, para desenvolver o que mais amo em fazer s2</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="portfolioFilter">
+          <ul>
+            <li><a href="#" data-filter="*" class="current">Web Sites Clones</a></li>
+            <li><a href="#" data-filter=".template">Folders e Vetores</a></li>
+            <li class="last"><a href="#" data-filter=".webdesign">Sistemas</a></li>
+          </ul>
+        </div>
+        <ul class="portfolioContainer row">
+          <li class="template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon">
+                  <a rel="lightbox-demo" href="images/projects/big-images/ctk.png" title="ctk Soluções em TI"
+                    class="zoom lb lb_warsaw1">
+                    <i class="fa fa-plus fa-2x"></i></a>
+                </span>
+              </span>
+              <img src="images/projects/thumb-images/ctk.png" alt="">
+            </div>
+          </li>
+          <li class="template wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon">
+                  <a rel="lightbox-demo" href="SpotiDu/index.html" target="_blank" title="Spotify Clone"
+                    class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> </span> </span>
+              <img src="images/projects/thumb-images/SpotifyClone.png" alt="SpotifyClone">
+
+          </li>
+          <li class="wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon">
+                  <a rel="lightbox-demo" href="./-MaratonaDevRocketseat/" title="Project Doe Sangue"
+                    class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> </span> </span>
+              <img src="images/projects/thumb-images/ScreenshotPortifolio.png" alt="Project Doe Sangue"> </div>
+          </li>
+          <li class="webdesign wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon">
+              <span class="hoverBox">
+                <span class="smallIcon"> <a rel="lightbox-demo" href="https://sevencapitall.com.br/" target="_blank"
+                    title="Project Title4" class="zoom lb lb_warsaw1">
+                    <i class="fa fa-search fa-2x"></i></a></span>
+              </span>
+              <img src="images/projects/thumb-images/ScreenshotSevenCapital.png"
+                alt="Junte -se a nós e invista seu captal onde o retorno é garantido!">
+            </div>
+          </li>
+          <li class="wordpress template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon">
+              <span class="hoverBox">
+                <span class="smallIcon">
+                  <a rel="lightbox-demo" href="images/projects/big-images/5.jpg" title="Project Title5"
+                    class="zoom lb lb_warsaw1">
+                    <i class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="images/projects/thumb-images/thumb5.jpg" alt="">
+            </div>
+          </li>
+          <li class="template webdesign illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
+                    href="/nlw6-salao/index.html" target="_blank" title="Salão de Beleza" class="zoom lb lb_warsaw1"><i
+                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="nlw6-salao/prints/capa.png" alt=""> </div>
+          </li>
+          <li class="wordpress webdesign col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
+                    href="https://eazycaprate.com.br/"  target="_blank" title="Eazy caprate" class="zoom lb lb_warsaw1"><i
+                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="images/projects/thumb-images/eazy.png" alt=""> </div>
+          </li>
+          <li class="template webdesign illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
+                    href="images/projects/big-images/8.jpg" title="Project Title8" class="zoom lb lb_warsaw1"><i
+                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="images/projects/thumb-images/thumb8.jpg" alt=""> </div>
+          </li>
+          <li class="template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
+                    href="images/projects/big-images/9.jpg" title="Project Title1" class="zoom lb lb_warsaw1"><i
+                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="images/projects/thumb-images/thumb9.jpg" alt=""> </div>
+          </li>
+          <li class="template wordpress col-xs-6 col-sm-3 col-md-4 col-lg-4">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
+                    href="images/projects/big-images/10.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i
+                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="images/projects/thumb-images/thumb10.jpg" alt=""> </div>
+          </li>
+          <li class="wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
+                    href="images/projects/big-images/11.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i
+                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="images/projects/thumb-images/thumb11.jpg" alt=""> </div>
+          </li>
+          <li class="template wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
+                    href="images/projects/big-images/12.jpg" title="Project Title4" class="zoom lb lb_warsaw1"><i
+                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
+                src="images/projects/thumb-images/thumb12.jpg" alt=""> </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--portfolio end-->
+    <section class="contact" id="contact">
+      <!--google map start-->
+      <div class="row mapArea">
+        <div id="map" style="width: 100%; height: 100%"></div>
+      </div>
+      <!--google map end-->
+    </section>
+    <section class="contactDetails">
+      <div class="container">
+        <div class="heading">
+          <h2>Onde me Econtrar</h2>
+          <h3>Especialista na criação de Apps Mobile (Android e IOs), Web Sites e e-commerce personalizados e 
+            gerenciáveis para você ou sua empresa. Ofereço as melhores soluções disponíveis no mercado.</h3>
+          <h2>Para maiores informações e Orçamento, chama no Zap!</h2>  
+        </div>
+    </section>
+    <!--contact end-->
+
+    <!--footer start-->
+    <section class="footer" id="footer">
+      <div class="container">
+        <ul>
+          <li><a href="https://www.instagram.com/eduardodeveloper/" target="_blank">
+            <i class="fa fa-instagram fa-2x"></i></a>
+          </li>
+          <li><a href="https://www.facebook.com/edutecnologo" target="_blank">
+            <i class="fa fa-facebook fa-2x"></i></a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/eduardotecnologo" target="_blank">
+            <i class="fa fa-linkedin fa-2x"></i></a>
+          </li>
+          <a href="https://api.whatsapp.com/send?phone=5532987024149&text=Texto%20aqui"
+            target="_blank"
+            style="position:fixed;bottom:20px;right:30px;">
+            <svg enable-background="new 0 0 512 512" width="50" height="50" version="1.1" viewBox="0 0 512 512" 
+              xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+              <path d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z" fill="#4CAF50"/>
+              <path d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"/>
+            </svg>
+          </a>
+
+          <!-- Footer Certificações-->
+          <div>
+            <a href="https://www.credential.net/b2f4d35e-dc1a-4368-9205-29dfb276fc02" target="_blank">
+              <img style="width: 200px;" src="images/devops.png" alt="devops">
+            </a>
+            <a href="https://www.credential.net/ae543413-cb08-49f0-aae1-db07b5b39e00" target="_blank">
+              <img style="width: 175px;" src="images/agileExin.png" alt="Agile Scrum">
+            </a>
+            <a href="#">
+              <img style="width: 175px;" src="images/msPartner.jpeg" alt="Microsoft Partiner Network">
+            </a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:6799002872303370240/">
+              <img style="width: 210px;" src="images/Engenheiro-de-Software-Agil.png" alt="Engenheiro de Software IGTI">
+            </a>
+          </div>
+      </div>
+      </ul>
+  </div>
+
+  <p class="text-center"><a href="#wrapper" class="gototop"><i class="fa fa-chevron-up fa-2"></i></a></p>
+  </section>
+  <!--footer end-->
+  </div>
+  <!--wrapper end-->
+
+  <!--modernizr js-->
+  <script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+  <!--jquary min js-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!--for placeholder jquery-->
+  <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+
+  <!--for header jquery-->
+  <script type="text/javascript" src="js/stickUp.js"></script>
+  <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    jQuery(function ($) {
+      $(document).ready(function () {
+        //enabling stickUp on the '.navbar-wrapper' class
+        $('.navbar-wrapper').stickUp({
+          parts: {
+            0: 'banner',
+            1: 'aboutus',
+            2: 'skillset',
+            3: 'experience',
+            4: 'education',
+            5: 'ourwork',
+            6: 'contact'
+          },
+          itemClass: 'menuItem',
+          itemHover: 'active',
+          topMargin: 'auto'
+        });
+      });
+
+
+    });
+  </script>
+  <script>
+    $('#banner').superslides({
+      animation: 'fade',
+      play: 5000
+    });
+  </script>
+
+  <!--for portfolio jquery-->
+  <script src="js/jquery.isotope.js" type="text/javascript"></script>
+  <link type="text/css" rel="stylesheet" id="theme" href="css/jquery-ui-1.8.16.custom.css">
+  <link type="text/css" rel="stylesheet" href="css/lightbox.min.css">
+  <script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.rlightbox.js"></script>
+
+  <!--contact form js-->
+  <script type="text/javascript" src="js/jquery.contact.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+      // Basic options for a simple Google Map
+      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+      var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 11,
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(-21.76417, -43.35028), // Juiz de Fora
+        scrollwheel: false,
+        // How you would like to style the map.
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [{
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#e9e9e9"
+          },
+          { "lightness": 17 }]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            },
+            {
+              "lightness": 20
+            }]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            },
+            {
+              "lightness": 17
+            }]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            },
+            {
+              "lightness": 29
+            },
+            {
+              "weight": 0.2
+            }]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            },
+            {
+
+              "lightness": 18
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            },
+            {
+              "lightness": 16
+            }]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+
+              "color": "#f5f5f5"
+            },
+            {
+              "lightness": 21
+            }]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#dedede"
+            }, {
+              "lightness": 21
+            }]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [{
+            "visibility": "on"
+
+          },
+          {
+            "color": "#ffffff"
+          },
+          {
+            "lightness": 16
+          }]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "saturation": 36
+          },
+          {
+            "color": "#333333"
+          },
+          {
+            "lightness": 40
+          }]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [{
+
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#f2f2f2"
+          },
+          {
+            "lightness": 19
+          }]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#fefefe"
+            },
+            {
+              "lightness": 20
+            }]
+        },
+        {
+          "featureType": "administrative",
+
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#fefefe"
+            },
+            {
+              "lightness": 17
+            },
+            {
+              "weight": 1.2
+            }]
+        }]
+      };
+
+      // Get the HTML DOM element that will contain your map
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
+
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+
+
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(40.6700, -73.9400),
+        map: map,
+        title: 'Hello!'
+      });
+    }
+  </script>
+
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/slideroption.js"></script>
+
+  <!--for theme custom jquery-->
+  <script src="js/custom.js"></script>
+
+</body>
+
 </html>
