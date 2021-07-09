@@ -9,7 +9,7 @@ for(const element of toggle){
     });
 }
 
-// Esconder o menu ao clicar nos links
+/* Esconder o menu ao clicar nos links*/
 const links = document.querySelectorAll('nav ul li a');
 
 for(const link of links){   
@@ -27,4 +27,14 @@ window.addEventListener('scroll', function(){
     } else{
         header.classList.remove('scroll');
     }
-})
+});
+
+/*Getting Started With Swiper*/
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView:1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true
+});
