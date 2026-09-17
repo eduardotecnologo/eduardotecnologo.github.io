@@ -1,875 +1,561 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <!-- Metas Page details-->
-  <title>Eduardo Alexandre - Personal Portfolio</title>
-
-  <meta name="description" content="Site Pessoal">
+  <title>Eduardo Alexandre - Software Engineer</title>
+  <meta name="description" content="Site pessoal de Eduardo Alexandre, Fullcycle Developer & Engineer.">
   <meta name="author" content="Eduardo Developer">
-  <!-- Mobile Specific Metas-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--main style-->
-  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-  <!--google font style-->
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <!--font-family: 'Metrophobic', serif;-->
-  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,400italic,600italic' rel='stylesheet'
-    type='text/css'>
-  <!--font-family: 'Open Sans', sans-serif;-->
-  <!-- font icon css style-->
+
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body onLoad="load()" onUnload="GUnload()">
-  <!-- Preloader -->
-  <div id="preloader">
-    <div id="status"></div>
-  </div>
-  <!--wrapper start-->
-  <div class="wrapper noGap" id="wrapper">
-    <!--Header start -->
-    <header>
-      <!--menu start-->
-      <div class="menu">
-        <a href="#" class="nav-icon" id="nav-show"><i class="fa fa-bars"></i></a>
-        <div class="navbar-wrapper">
-          <div class="container">
-            <div class="navwrapper">
-              <div class="navbar navbar-inverse navbar-static-top">
-                <div class="container">
-                  <!--<div class="logo">logo</div> -->
-                  <div class="navArea"><a href="#" class="closeMenu"><i class="fa fa-times"></i></a>
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                      </button>
-                      <!-- <a class="navbar-brand" href="#">Menu</a>  -->
-                    </div>
-                    <div class="navbar-collapse collapse">
-                      <ul class="nav navbar-nav">
-                        <li class="menuItem active"><a href="#wrapper">Home</a></li>
-                        <li class="menuItem"><a href="#aboutus">About Me</a></li>
-                        <li class="menuItem"><a href="#skillset">Skills</a></li>
-                        <li class="menuItem"><a href="#experience">Experience</a></li>
-                        <li class="menuItem"><a href="#education">Education</a></li>
-                        <li class="menuItem"><a href="#ourwork">Portfolio</a></li>
-                        <li class="menuItem"><a href="#contact">Contact</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+<body>
+  <div id="top-progress"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="nav-inner">
+      <a href="#wrapper" class="brand">Eduardo<span>.dev</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#wrapper" class="menuItem active">Início</a>
+        <a href="#aboutus" class="menuItem">Sobre</a>
+        <a href="#skillset" class="menuItem">Skills</a>
+        <a href="#trajetoria" class="menuItem">Trajetória</a>
+        <a href="#projetos-atuais" class="menuItem">Projetos Atuais</a>
+        <a href="#ourwork" class="menuItem">Portfólio</a>
+        <a href="#contact" class="menuItem">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrapper" id="wrapper">
+
+    <!-- HERO -->
+    <section class="hero" id="banner">
+      <div class="hero-bg" style="background-image:url('images/header-image/back01.jpg')"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Juiz de Fora · Brasil</p>
+        <h1>Eu sou <span class="gradient-text">Eduardo Alexandre</span></h1>
+        <h2>Fullcycle Developer &amp; Engineer</h2>
+        <p class="hero-desc">Mais de uma década construindo software, times e soluções — da rede e do chão de
+          fábrica ao código, arquitetura e nuvem.</p>
+        <div class="hero-cta">
+          <a href="#ourwork" class="btn btn-primary">Ver Portfólio</a>
+          <a href="#contact" class="btn btn-ghost">Falar comigo</a>
+        </div>
+      </div>
+      <a href="#aboutus" class="scroll-cue" aria-label="Rolar para baixo"><i class="fa fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="aboutus">
+      <div class="container">
+        <div class="heading">
+          <p class="eyebrow">Sobre mim</p>
+          <h2>A tecnologia é o que movimenta o mundo</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="images/edu.jpg" alt="Eduardo Alexandre">
+          </div>
+          <div class="about-text">
+            <h3>Eduardo Alexandre</h3>
+            <h4>Fullcycle Developer &amp; Engineer</h4>
+            <p>Opaa...Bem vindo! Sou da cidade de Juiz de Fora - MG, Programador, criador de Apps, professor
+              voluntário e palestrante. Atualmente trabalhando como Analista de Sistemas responsável por uma Equipe
+              de Sustentação. Fui desenvolvedor durante 5 anos na CTK Soluções, empresa que fundei com um
+              amigo/sócio, que hoje presto alguns serviços como freelancer. Passo a maior parte do meu tempo na
+              frente do computador, estudando novas tecnologias e criando coisas, ao fazer isso, me sinto motivado
+              em ajudar pessoas com dicas e compartilhando meu conhecimento, e tudo isso só é possível com vários
+              litros de Café por dia...rsrs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skillset">
+      <div class="container">
+        <div class="heading">
+          <p class="eyebrow">Habilidades</p>
+          <h2>No que eu sou bom</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-intro">
+            <p>O mercado busca cada vez mais especialistas proativos, curiosos e que tenham visão de mercado. As
+              empresas esperam que o profissional de TI conheça o negócio, e que utilize suas habilidades técnicas
+              para encontrar soluções, diminuir custos, alavancar os lucros e garantir mais segurança nos
+              procedimentos. Por isso os estudos nunca acabam, é preciso ficar atento às mudanças e se qualificar
+              para novos desafios.</p>
+          </div>
+          <div class="skills-bars">
+            <div class="skillbar" data-percent="90">
+              <div class="skillbar-top"><span>Segurança da Informação</span><span class="skillbar-num">90%</span></div>
+              <div class="skillbar-track"><div class="skillbar-fill"></div></div>
+            </div>
+            <div class="skillbar" data-percent="90">
+              <div class="skillbar-top"><span>Oracle PL/SQL</span><span class="skillbar-num">90%</span></div>
+              <div class="skillbar-track"><div class="skillbar-fill"></div></div>
+            </div>
+            <div class="skillbar" data-percent="90">
+              <div class="skillbar-top"><span>Docker</span><span class="skillbar-num">90%</span></div>
+              <div class="skillbar-track"><div class="skillbar-fill"></div></div>
+            </div>
+            <div class="skillbar" data-percent="90">
+              <div class="skillbar-top"><span>Javascript</span><span class="skillbar-num">90%</span></div>
+              <div class="skillbar-track"><div class="skillbar-fill"></div></div>
+            </div>
+            <div class="skillbar" data-percent="90">
+              <div class="skillbar-top"><span>DevOps</span><span class="skillbar-num">90%</span></div>
+              <div class="skillbar-track"><div class="skillbar-fill"></div></div>
+            </div>
+            <div class="skillbar" data-percent="80">
+              <div class="skillbar-top"><span>GO</span><span class="skillbar-num">80%</span></div>
+              <div class="skillbar-track"><div class="skillbar-fill"></div></div>
+            </div>
+            <div class="skillbar" data-percent="100">
+              <div class="skillbar-top"><span>C++</span><span class="skillbar-num">100%</span></div>
+              <div class="skillbar-track"><div class="skillbar-fill"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAJETORIA: EXPERIENCE + EDUCATION (tabs) -->
+    <section class="section" id="trajetoria">
+      <div class="container">
+        <div class="heading">
+          <p class="eyebrow">Minha história</p>
+          <h2>Trajetória Profissional &amp; Acadêmica</h2>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="experience">Experiência</button>
+          <button class="tab-btn" data-tab="education">Formação &amp; Diplomas</button>
+        </div>
+
+        <div class="tab-panel active" id="experience">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">Maio, 2022<br>Job Atual</div>
+              <div class="timeline-content">
+                <h4>MRS Logística</h4>
+                <h5>System Analyst</h5>
+                <p>Responsável pela equipe de sustentação e na criação de novas features na Squad Operação de
+                  Trens, nos principais sistemas de Operação na MRS.</p>
               </div>
             </div>
-            <!-- End Navbar -->
-          </div>
-        </div>
-      </div>
-      <!--menu end-->
-      <!--banner start-->
-      <div class="banner row" id="banner">
-        <div class="bannerText">
-          <h1>I'm Eduardo Alexandre</h1>
-          <h3>- Brazil -</h3>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%">
-          <!--background slide show start-->
-          <div class="slide">
-            <img src="images/header-image/back01.jpg" alt="image01"> </div>
-          <div class="slide">
-            <img src="images/header-image/image02.jpg" alt="image01"> </div>
-          <!--background slide show end-->
-        </div>
-      </div>
-      <!--banner end-->
-
-    </header>
-    <!--Header end -->
-    <!--about us start-->
-    <section class="aboutus" id="aboutus">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="heading">
-              <h2>About me</h2>
-              <h3>ATecnologia é o que movimenta o Mundo!</h3>
+            <div class="timeline-item">
+              <div class="timeline-date">Março, 2021<br>Abril, 2022</div>
+              <div class="timeline-content">
+                <h4>MRS Logística</h4>
+                <h5>Information Technology Assistant</h5>
+                <p>Atuando no Desenvolvimento e manutenção de Softwares internos.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Janeiro, 2019<br>Março, 2021</div>
+              <div class="timeline-content">
+                <h4>MRS Logística</h4>
+                <h5>Syslog Operator</h5>
+                <p>Atuando no CCO (Centro de Controle Operacional) como Operador de SISLOG, realizando o
+                  acompanhamento da circulação dos trens em toda a malha ferroviária, registrando informações
+                  relativas às movimentações dos trens (locomotivas e vagões) e inserção de eventos adversos para
+                  gerar base de dados para a tomada de decisão dos controladores e programadores na otimização da
+                  circulação e alimentando indicadores para verificação de possíveis gargalos no processo. Garantir
+                  as normas de segurança da informação, identificando as condições inseguras na formação das
+                  composições e fazendo o registro exato dos eventos realizados.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Junho, 2018<br>Dezembro, 2018</div>
+              <div class="timeline-content">
+                <h4>Manserv Facilities</h4>
+                <h5>Técnico em Meio Ambiente - Mercedes-Benz</h5>
+                <p>O Técnico em Meio Ambiente é o profissional responsável pelo levantamento e sistematização de
+                  dados, informações e documentos técnicos para subsidiar a realização de estudos socioambientais.
+                  Contribui no processo de elaboração de políticas ambientais, na implementação e controle de
+                  programas de gerenciamento ambiental e sistemas de gestão integrada. Atua em organizações
+                  públicas, privadas e não governamentais do comércio, serviços, indústria, consultoria, ensino e
+                  pesquisa, abrangendo instituições de assistência técnica, pesquisa e extensão rural, estações de
+                  tratamento de resíduos, empresas de licenciamento ambiental, unidades de conservação ambiental,
+                  cooperativas, associações, portos e aeroportos.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Janeiro, 2017<br>Job Atual</div>
+              <div class="timeline-content">
+                <h4>Freelancer</h4>
+                <h5>Software Engineer Fullstack</h5>
+                <p>Desenvolvedor Fullstack, Javascript (React/React Native, Angular JS, Vue JS), Flutter, .Net, PHP
+                  Laravel, Ruby on Rails, soluções em Segurança da Informação, Design/Arte Finalista.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Junho, 2012<br>Dezembro, 2016</div>
+              <div class="timeline-content">
+                <h4>ctk Soluções em TI</h4>
+                <h5>Senior Developer</h5>
+                <p>Muito além de criar sistemas, desenvolvedores devem dominar mais de uma linguagem, a fim de
+                  programar sistemas empregando também as chamadas linguagens auxiliares (a exemplo do Javascript
+                  quando utilizado como linguagem auxiliar ao HTML). Além disso, devem ser capazes de criar
+                  softwares tendo em vista a cadeia completa de desenvolvimento: concepção, implementação, operação
+                  e manutenção.</p>
+              </div>
             </div>
           </div>
+          <div class="timeline-more-wrap">
+            <button class="btn btn-ghost timeline-more">Ver mais <i class="fa fa-chevron-down"></i></button>
+          </div>
         </div>
-        <div class="row">
-          <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="images/edu.jpg" alt=""></div>
-          <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
-            <h5>Eduardo Alexandre</h5>
-            <h4>Fullcycle Developer &amp; Engineer</h4>
-            <p>Opaa...Bem vindo! Sou da cidade de Juiz de Fora - MG, Programador, criador de Apps, professor voluntário
-              e palestrante. Atualmente trabalhando como Analista de Sistemas responsável por uma Equipe de Sustentação.
-              Fui desenvolvedor durante 5 anos na CTK Soluções, empresa que fundei com um amigo/sócio, que hoje presto
-              alguns serviços como freelancer. Passo a maior parte do meu tempo na frente do computador, estudando novas tecnologias e
-              criando coisas, ao fazer isso, me sinto motivado em ajudar pessoas com dicas e compartilhando meu conhecimento, e tudo
-              isso só é possível com vários litros de Café por dia...rsrs</p>
+
+        <div class="tab-panel" id="education">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">Maio, 2025<br>O momento</div>
+              <div class="timeline-content">
+                <h4>Especialista Full Cycle IA 4.0</h4>
+                <h5>Fullcycle IA</h5>
+                <p>Seja um desenvolvedor insubstituível na era da IA. Soluções geradas com IA dependem de
+                  conhecimentos sólidos.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Agosto, 2025<br>Agosto, 2026</div>
+              <div class="timeline-content">
+                <h4>Pós-graduação Lato Sensu - Especialização em Tecnologias Java</h4>
+                <h5>Universidade Anhanguera São Paulo</h5>
+                <p>Curso destinado a graduados com conhecimentos em programação e tecnologia, e a profissionais de
+                  outras áreas que desejam adquirir habilidades e competências para atuar com soluções de
+                  arquitetura em Java. Atividades e grupos: Programação, Arquitetura.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Janeiro, 2025<br>Fevereiro, 2026</div>
+              <div class="timeline-content">
+                <h4>Pós-graduação Lato Sensu - Especialização em Inteligência Artificial e Machine Learning</h4>
+                <h5>Universidade Anhanguera São Paulo</h5>
+                <p>Especialização com foco em técnicas de Inteligência Artificial e Machine Learning aplicadas ao
+                  desenvolvimento de soluções de software.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Setembro, 2024<br>Janeiro, 2026</div>
+              <div class="timeline-content">
+                <h4>Pós-graduação Lato Sensu em Arquitetura de Software</h4>
+                <h5>Universidade Anhanguera São Paulo</h5>
+                <p>Aprofundamento em arquitetura de software, com foco em padrões arquiteturais, escalabilidade e
+                  boas práticas para projetar sistemas robustos e sustentáveis.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Janeiro, 2023<br>Julho, 2024</div>
+              <div class="timeline-content">
+                <h4>Especialista Fullcycle</h4>
+                <h5>Fullcycle</h5>
+                <p>Muitos alunos consideram o curso Full Cycle mais enriquecedor do que uma pós-graduação pelo fato
+                  dele estar sempre refletindo as exigências do mercado, agregando na teoria e na prática o que
+                  realmente um dev precisa saber para evoluir na carreira.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Janeiro, 2023<br>Fevereiro, 2024</div>
+              <div class="timeline-content">
+                <h4>Pós em Arquitetura de Software e Infra</h4>
+                <h5>Faculdade Venda Nova do Imigrante - FAVENI</h5>
+                <p>Seu objetivo é garantir que a implementação esteja alinhada com a arquitetura definida e que o
+                  sistema esteja sendo construído de acordo com as melhores práticas. Além disso, o arquiteto de
+                  software é responsável por identificar e mitigar riscos relacionados à arquitetura do sistema.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Janeiro, 2022<br>Outubro, 2022</div>
+              <div class="timeline-content">
+                <h4>MBA em Gestão da Qualidade de Software</h4>
+                <h5>Faculdade Unyleya</h5>
+                <p>Ampliar a compreensão de concepções acerca da gestão da qualidade de software, bem como refletir
+                  sobre as respectivas implicações para o exercício da profissão.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Março, 2017<br>Dezembro, 2021</div>
+              <div class="timeline-content">
+                <h4>Bacharel em Sistemas de Informação</h4>
+                <h5>Universidade Salgado de Oliveira</h5>
+                <p>O bacharel em Sistemas de Informação é responsável pela administração do fluxo de informações nas
+                  redes de computadores de uma empresa. Ele desenvolve, implementa ou adapta softwares com o
+                  objetivo de melhorar a organização e acessibilidade das informações.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Março, 2014<br>Dezembro, 2017</div>
+              <div class="timeline-content">
+                <h4>Tecnólogo em Análise e Desenvolvimento de Sistemas</h4>
+                <h5>Universidade Estácio de Sá</h5>
+                <p>O analista de sistemas é um profissional da área de Tecnologia da Informação (TI) que analisa e
+                  desenvolve sistemas, mapeia processos, faz a modelagem de dados e levanta os requisitos para
+                  implementar esses programas de acordo com os objetivos e as regras de negócio da empresa
+                  contratante.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Junho, 2011<br>Dezembro, 2012</div>
+              <div class="timeline-content">
+                <h4>Técnico em Redes de Computadores e Servidores</h4>
+                <h5>Senac Juiz de Fora</h5>
+                <p>O Técnico em redes de computadores é o profissional que projeta a rede tanto na questão lógica
+                  quanto na física, também realiza a instalação, configuração e manutenção em redes de
+                  computadores, instala e configura roteadores e switchs. Faz a implementação e administração de
+                  sistemas operacionais em redes corporativas e residenciais.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Março, 2011<br>Dezembro, 2012</div>
+              <div class="timeline-content">
+                <h4>Técnico em Meio Ambiente</h4>
+                <h5>IFET Campus Muzambinho - MG</h5>
+                <p>O profissional Técnico em Meio Ambiente possui uma sólida base de conhecimentos tecnológicos,
+                  gerenciais e humanísticos, adaptando-se a novas situações, buscando incentivar e participar de
+                  todas as ações e projetos locais referentes a ações de preservação do meio ambiente, sensibilizar
+                  a sociedade empregando argumentação e dados concretos para a preservação e boa utilização dos
+                  recursos naturais, tendo sempre em vista o desenvolvimento sustentável, orientar empresas,
+                  instituições, escolas, etc., com relação à legislação ambiental, identificar situações de risco
+                  ambiental, intervir no sentido de minimizar toda situação de risco ambiental observada, acionando,
+                  se for o caso, o poder público e a sociedade de modo geral, auxiliar a aplicação e fiscalização da
+                  legislação ambiental, avaliar modelos de gestão ambiental utilizados na exploração de recursos
+                  naturais e nos processos produtivos, e elaborar e acompanhar a implementação de projetos de gestão
+                  e educação ambiental.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-extra="1">
+              <div class="timeline-date">Junho, 2006<br>Dezembro, 2007</div>
+              <div class="timeline-content">
+                <h4>Técnico em Química e Gestão Ambiental</h4>
+                <h5>CETEPRO - Centro Técnico Profissionalizante</h5>
+                <p>O técnico em Química é o profissional que pode realizar análises, operar processos e atuar no
+                  desenvolvimento de produtos e serviços da área química e gestão técnica dos processos, zelando
+                  por padrões de qualidade e pela integridade de pessoas, do meio ambiente e das instalações.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-more-wrap">
+            <button class="btn btn-ghost timeline-more">Ver mais <i class="fa fa-chevron-down"></i></button>
           </div>
         </div>
       </div>
     </section>
-    <!--about us end-->
-    <!--Skillset start -->
-    <section id="skillset" class="skillset">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="heading">
-              <h2>Skills &amp; Expertice</h2>
-              <h3>I can say i´ m quite good at</h3>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="col-md-6 col-sm-12 media">
-              <p>O mercado busca cada vez mais especialistas proativos, curiosos e que tenham visão de mercado.
-                As empresas esperam que o profissional de TI conheça o negócio, e que utilize suas habilidades técnicas
-                para
-                encontrar soluções e diminuir custos, alavancar os lucros e garantir mais segurança nos procedimentos.
-                Por isso os estudos nunca acabam, é preciso ficar atento as mudanças e se qualificar para novos desafios
-              </p>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title"><span>Segurança da Informação</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent"></div>
-              </div> <!-- End Skill Bar -->
 
-
-              <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title"><span>Oracle PL/SQL</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent"></div>
-              </div> 
-
-
-              <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title"><span>Docker</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent"></div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title"><span>Javascript</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent"></div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="90%">
-                <div class="skillbar-title"><span>DevOps</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent"></div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="80%">
-                <div class="skillbar-title"><span>GO</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent"></div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="100%">
-                <div class="skillbar-title"><span>C++</span></div>
-                <div class="skillbar-bar"></div>
-                <div class="skill-bar-percent"></div>
-              </div> <!-- End Skill Bar -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--Skillset end -->
-    <!--Work Experties start -->
-    <section id="experience" class="myexperties">
+    <!-- PROJETOS ATUAIS (NOVA SEÇÃO) -->
+    <section class="section section-alt" id="projetos-atuais">
       <div class="container">
         <div class="heading">
-          <h2>Work Experience</h2>
-          <h3>My previous associations</h3>
+          <p class="eyebrow">O que estou fazendo agora</p>
+          <h2>Projetos Atuais</h2>
         </div>
-        <!--Works-->
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Maio, 2022<br>Job Atual
+        <div class="current-grid">
+          <!-- CURRENT-CARD START: duplique este bloco para cada novo projeto -->
+          <article class="current-card">
+            <div class="current-card-media">
+              <img src="images/projects/2026/linktoo.png" alt="Linktoo - Plataforma de Bio Links" loading="lazy">
             </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>MRS Logística</h4>
-            <h5>System Analyst</h5>
-            <p> Responsável pela equipe de sustentação e na criação de novas features na Squad Operação de Trens, nos principais sistemas de Operação na MRS..</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Março, 2021<br>Abril, 2022
+            <div class="current-card-body">
+              <div class="current-card-top">
+                <span class="current-status">Em andamento</span>
+              </div>
+              <h3>Linktoo</h3>
+              <p>Plataforma de Bio Links para centralizar e compartilhar todos os seus links importantes em uma
+                única página personalizável.</p>
+              <div class="current-tags">
+                <span>Next.js</span><span>React</span><span>Vercel</span>
+              </div>
+              <div class="current-links">
+                <a href="https://linktoo-two.vercel.app" target="_blank" class="btn btn-sm btn-primary">Ver Projeto</a>
+              </div>
             </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>MRS Logística</h4>
-            <h5>Information Technology Assistant</h5>
-            <p> Atuando no Desenvolvimento e manutenção de Softwares internos.</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Janeiro,2019<br>Março, 2021
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>MRS Logística</h4>
-            <h5>Syslog Operator</h5>
-            <p> Atuando no CCO (Centro de Controle Operacional) como Operador de SISLOG, realizando o
-              acompanhamento da circulação dos trens em toda a malha ferroviária, registrando informações
-              relativas às movimentações dos trens (locomotivas e vagões) e inserção de eventos adversos
-              para gerar base de dados para a tomada de decisão dos controladores e programadores na
-              otimização da circulação e alimentando indicadores para verificação de possíveis gargalos
-              no processo. Garantir as normas de segurança da informação, identificando as condições
-              inseguras na formação das composições e fazendo o registro exato dos eventos realizados.</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Junho,2018<br>Dezembro, 2018
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Manserv Facilities</h4>
-            <h5>Técnico em Meio Ambiente - Mercedes-Benz</h5>
-            <p> O Técnico em Meio Ambiente é o profissional responsável pelo levantamento e sistematização
-              de dados, informações e documentos técnicos para subsidiar a realização de estudos
-              socioambientais. Contribui no processo de elaboração de políticas ambientais, na implementação
-              e controle de programas de gerenciamento ambiental e sistemas de gestão integrada. Atua em
-              organizações públicas, privadas e não governamentais do comércio, serviços, indústria,
-              consultoria, ensino e pesquisa, abrangendo instituições de assistência técnica, pesquisa e
-              extensão rural, estações de tratamento de resíduos, empresas de licenciamento ambiental,
-              unidades de conservação ambiental, cooperativas, associações, portos e aeroportos..</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Janeiro,2017<br>Job Atual
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Freelancer</h4>
-            <h5></h5>Software Engineer Fullstack</h5>
-            <p>Desenvolvedor Fullstack , Javascript (React/React Native, Angular JS, Vue JS), Flutter, .Net, PHP
-              Laravel, Ruby on
-              Rails, soluções em Segurança da
-              Informação, Design/Arte
-              Finalista</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Junho,2012<br>Dezembro 2016
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>ctk Soluções em TI</h4>
-            <h5>Senior Developer</h5>
-            <p>Muito além de criar sistemas, desenvolvedores devem dominar mais de uma linguagem, a fim de programar
-              sistemas empregando também as chamadas linguagens auxiliares
-              (a exemplo do Javascript quando utilizado como linguagem auxiliar ao HTML).
-              Além disso, devem ser capazes de criar softwares tendo em vista a cadeia completa de desenvolvimento:
-              concepção, implementação, operação e manutenção.
-              Suas criações precisam focar sempre em problemas reais, impactando o dia a dia da empresa e viabilizando a
-              inovação.</p>
-          </div>
-        </div>
-    </section>
-    <!--Work Experties end -->
-    <!--Education & diploma start -->
-    <section id="education" class="educationdiploma">
-      <div class="container">
-        <div class="heading">
-          <h2>Formação &amp; Diplomas</h2>
-          <h3>Orgulho!!!</h3>
-        </div>
-       
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Janeiro,2023<br>Julho 2024
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Especialista Fullcucle/h4>
-            <h5>Fullcycle</h5>
-            <p>
-              Muitos alunos consideram o curso Full Cycle mais enriquecedor do que uma pós-graduação pelo fato dele estar sempre refletindo as exigências do mercado agregando 
-              na teoria e na prática o que realmente um dev precisa saber para evoluir na carreira. </p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Janeiro,2023<br>Fevereiro 2024
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Pós em Arquitetura de Software e Infra</h4>
-            <h5>Faculdade Venda Nova do Imigrante - FAVENI</h5>
-            <p>Seu objetivo é garantir que a implementação esteja alinhada com a arquitetura definida e que o sistema esteja sendo construído de acordo com as melhores práticas. 
-              Além disso, o arquiteto de software é responsável por identificar e mitigar riscos relacionados à arquitetura do sistema..</p>
-          </div>
-        </div> <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Janeiro,2023<br>Fevereiro 2024
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Pós em Arquitetura de Software e Infra</h4>
-            <h5>Faculdade Venda Nova do Imigrante - FAVENI</h5>
-            <p>Seu objetivo é garantir que a implementação esteja alinhada com a arquitetura definida e que o sistema esteja sendo construído de acordo com as melhores práticas. 
-              Além disso, o arquiteto de software é responsável por identificar e mitigar riscos relacionados à arquitetura do sistema..</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Janeiro,2022<br>Outubro 2022
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>MBA em Gestão da Qualidade de Software</h4>
-            <h5>Faculdade Unyleya</h5>
-            <p>Ampliar a compreensão de concepções acerca da gestão da qualidade de software, bem como refletir
-               sobre as respectivas implicações para o exercício da profissão.</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Março,2017<br>Dezembro 2021
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Bacharel em Sistemas de Informação</h4>
-            <h5>Universidade Salgado de Oliveira</h5>
-            <p>O bacharel em Sistemas de Informação é responsável pela administração do fluxo de informações nas redes
-              de
-              computadores de uma empresa. Ele desenvolve, implementa ou adapta softwares com o objetivo de melhorar a
-              organização e acessibilidade das informações.</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Março,2014<br>Dezembro 2017
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Tecnologo em Análise e Desenvolvimento de Sistemas</h4>
-            <h5>Universidade Estácio de Sá</h5>
-            <p>O analista de sistemas é um profissional da área de Tecnologia da Informação (TI) que analisa e
-              desenvolve sistemas, mapeia processos,
-              faz a modelagem de dados e levanta os requisitos para implementar esses programas de acordo com os
-              objetivos e as regras de negócio da empresa contratante..</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Junho,2011<br>Dezembro 2012
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Técnico em Redes de Computadores e Servidores</h4>
-            <h5>Senac Juiz de Fora</h5>
-            <p>O Técnico em redes de computadores é o profissional que projeta a rede tanto na questão lógica quanto na
-              física, também realiza a instalação,
-              configuração e manutenção em redes de computadores, instala e configura roteadores e switchs. Faz a
-              implementação e administração de sistemas
-              operacionais em redes corporativas e residenciais.</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Março,2011<br>Dezembro 2012
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Técnico em Meio Ambiente</h4>
-            <h5>IFET Campus Muzambinho - MG</h5>
-            <p>O profissional Técnico em Meio Ambiente possui uma sólida base de conhecimentos tecnológicos, gerenciais
-              e humanísticos, adaptando-se a novas situações
-              buscando incentivar e participar de todas as ações e projetos locais referentes a ações de preservação do
-              meio ambiente, sensibilizar a sociedade
-              empregando argumentação e dados concretos para a preservação e boa utilização dos recursos naturais, tendo
-              sempre em vista o desenvolvimento sustentável,
-              orientar empresas, instituições, escolas, etc., com relação à legislação ambiental, identificar situações
-              de risco ambiental intervir no sentido de
-              minimizar toda situação de risco ambiental observada, acionando, se for o caso, o poder público e a
-              sociedade de modo geral, auxiliar a aplicação e
-              fiscalização da legislação ambiental, avaliar modelos de gestão ambiental, utilizados na exploração de
-              recursos naturais e nos processos produtivo
-              e elaborar e acompanhar a implementação de projetos de gestão e educação ambiental.</p>
-          </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <div class="expertiesico">
-              Junho,2006<br>Dezembro 2007
-            </div>
-          </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <h4>Técnico em Química e Gestão Ambienteal</h4>
-            <h5>CETEPRO - Centro Técnico Profissionalizante</h5>
-            <p>O técnico em QUÍMICA é o profissional que pode realizar análises, operar processos e atuar no
-              desenvolvimento de produtos e serviços da área química e gestão
-              técnica dos processos, zelando por padrões de qualidade e pela integridade de pessoas, do meio ambiente e
-              das instalações.</p>
-          </div>
+          </article>
+          <!-- CURRENT-CARD END -->
         </div>
       </div>
     </section>
-    <!--Education & diploma end -->
 
-
-    <!--portfolio start-->
-    <section class="protfolio" id="ourwork">
+    <!-- PORTFOLIO -->
+    <section class="section" id="ourwork">
       <div class="container">
         <div class="heading">
+          <p class="eyebrow">Trabalhos anteriores</p>
           <h2>Portfólio</h2>
           <h3>Litros de café diários, para desenvolver o que mais amo em fazer s2</h3>
         </div>
-      </div>
-      <div class="row">
-        <div class="portfolioFilter">
-          <ul>
-            <li><a href="#" data-filter="*" class="current">Web Sites Clones</a></li>
-            <li><a href="#" data-filter=".template">Folders e Vetores</a></li>
-            <li class="last"><a href="#" data-filter=".webdesign">Sistemas</a></li>
-          </ul>
-        </div>
-        <ul class="portfolioContainer row">
-          <li class="template col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon">
-                  <a rel="lightbox-demo" href="images/projects/big-images/ctk.png" title="ctk Soluções em TI"
-                    class="zoom lb lb_warsaw1">
-                    <i class="fa fa-plus fa-2x"></i></a>
-                </span>
-              </span>
-              <img src="images/projects/thumb-images/ctk.png" alt="">
-            </div>
-          </li>
-          <li class="template wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon">
-                  <a rel="lightbox-demo" href="SpotiDu/index.html" target="_blank" title="Spotify Clone"
-                    class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> </span> </span>
-              <img src="images/projects/thumb-images/SpotifyClone.png" alt="SpotifyClone">
 
+        <div class="portfolioFilter">
+          <button data-filter="*" class="current">Web Sites Clones</button>
+          <button data-filter="template">Folders e Vetores</button>
+          <button data-filter="webdesign">Sistemas</button>
+        </div>
+
+        <ul class="portfolioContainer">
+          <li class="portfolio-item template" data-cats="template">
+            <a href="images/projects/big-images/ctk.png" target="_blank" title="ctk Soluções em TI">
+              <img src="images/projects/thumb-images/ctk.png" alt="ctk Soluções em TI" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> ctk Soluções em TI</span>
+            </a>
           </li>
-          <li class="wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon">
-                  <a rel="lightbox-demo" href="./-MaratonaDevRocketseat/" title="Project Doe Sangue"
-                    class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> </span> </span>
-              <img src="images/projects/thumb-images/ScreenshotPortifolio.png" alt="Project Doe Sangue"> </div>
+          <li class="portfolio-item template webdesign" data-cats="template webdesign">
+            <a href="SpotiDu/index.html" target="_blank" title="Spotify Clone">
+              <img src="images/projects/thumb-images/SpotifyClone.png" alt="Spotify Clone" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Spotify Clone</span>
+            </a>
           </li>
-          <li class="webdesign wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon">
-              <span class="hoverBox">
-                <span class="smallIcon"> <a rel="lightbox-demo" href="https://sevencapitall.com.br/" target="_blank"
-                    title="Project Title4" class="zoom lb lb_warsaw1">
-                    <i class="fa fa-search fa-2x"></i></a></span>
-              </span>
-              <img src="images/projects/thumb-images/ScreenshotSevenCapital.png"
-                alt="Junte -se a nós e invista seu captal onde o retorno é garantido!">
-            </div>
+          <li class="portfolio-item webdesign" data-cats="webdesign">
+            <a href="./-MaratonaDevRocketseat/" title="Doe Sangue">
+              <img src="images/projects/thumb-images/ScreenshotPortifolio.png" alt="Doe Sangue" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Doe Sangue</span>
+            </a>
           </li>
-          <li class="wordpress template col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon">
-              <span class="hoverBox">
-                <span class="smallIcon">
-                  <a rel="lightbox-demo" href="images/projects/big-images/5.jpg" title="Project Title5"
-                    class="zoom lb lb_warsaw1">
-                    <i class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="images/projects/thumb-images/thumb5.jpg" alt="">
-            </div>
+          <li class="portfolio-item webdesign" data-cats="webdesign">
+            <a href="https://sevencapitall.com.br/" target="_blank" title="Seven Capital">
+              <img src="images/projects/thumb-images/ScreenshotSevenCapital.png" alt="Seven Capital" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Seven Capital</span>
+            </a>
           </li>
-          <li class="template webdesign illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
-                    href="/nlw6-salao/index.html" target="_blank" title="Salão de Beleza" class="zoom lb lb_warsaw1"><i
-                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="nlw6-salao/prints/capa.png" alt=""> </div>
+          <li class="portfolio-item template" data-cats="template" data-extra="1">
+            <a href="images/projects/big-images/5.jpg" target="_blank" title="Projeto 5">
+              <img src="images/projects/thumb-images/thumb5.jpg" alt="Projeto 5" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Projeto</span>
+            </a>
           </li>
-          <li class="wordpress webdesign col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
-                    href="https://eazycaprate.com.br/"  target="_blank" title="Eazy caprate" class="zoom lb lb_warsaw1"><i
-                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="images/projects/thumb-images/eazy.png" alt=""> </div>
+          <li class="portfolio-item webdesign" data-cats="webdesign" data-extra="1">
+            <a href="/nlw6-salao/index.html" target="_blank" title="Salão de Beleza">
+              <img src="nlw6-salao/prints/capa.png" alt="Salão de Beleza" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Salão de Beleza</span>
+            </a>
           </li>
-          <li class="template webdesign illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
-                    href="https://edustore.vercel.app/" target="_blank" title="Project EduStore" class="zoom lb lb_warsaw1"><i
-                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="images/projects/thumb-images/edustore.png" alt=""> </div>
+          <li class="portfolio-item webdesign" data-cats="webdesign" data-extra="1">
+            <a href="https://eazycaprate.com.br/" target="_blank" title="Eazy Caprate">
+              <img src="images/projects/thumb-images/eazy.png" alt="Eazy Caprate" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Eazy Caprate</span>
+            </a>
           </li>
-          <li class="template col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
-                    href="images/projects/big-images/9.jpg" title="Project Title1" class="zoom lb lb_warsaw1"><i
-                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="images/projects/thumb-images/thumb9.jpg" alt=""> </div>
+          <li class="portfolio-item template webdesign" data-cats="template webdesign" data-extra="1">
+            <a href="https://edustore.vercel.app/" target="_blank" title="EduStore">
+              <img src="images/projects/thumb-images/edustore.png" alt="EduStore" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> EduStore</span>
+            </a>
           </li>
-          <li class="template wordpress col-xs-6 col-sm-3 col-md-4 col-lg-4">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
-                    href="images/projects/big-images/10.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i
-                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="images/projects/thumb-images/thumb10.jpg" alt=""> </div>
+          <li class="portfolio-item template" data-cats="template" data-extra="1">
+            <a href="images/projects/big-images/9.jpg" target="_blank" title="Projeto 9">
+              <img src="images/projects/thumb-images/thumb9.jpg" alt="Projeto 9" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Projeto</span>
+            </a>
           </li>
-          <li class="wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
-                    href="images/projects/big-images/11.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i
-                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="images/projects/thumb-images/thumb11.jpg" alt=""> </div>
+          <li class="portfolio-item template" data-cats="template" data-extra="1">
+            <a href="images/projects/big-images/10.jpg" target="_blank" title="Projeto 10">
+              <img src="images/projects/thumb-images/thumb10.jpg" alt="Projeto 10" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Projeto</span>
+            </a>
           </li>
-          <li class="template wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
-            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo"
-                    href="images/projects/big-images/12.jpg" title="Project Title4" class="zoom lb lb_warsaw1"><i
-                      class="fa fa-search fa-2x"></i></a> </span> </span> <img
-                src="images/projects/thumb-images/thumb12.jpg" alt=""> </div>
+          <li class="portfolio-item" data-cats="" data-extra="1">
+            <a href="images/projects/big-images/11.jpg" target="_blank" title="Projeto 11">
+              <img src="images/projects/thumb-images/thumb11.jpg" alt="Projeto 11" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Projeto</span>
+            </a>
+          </li>
+          <li class="portfolio-item template" data-cats="template" data-extra="1">
+            <a href="images/projects/big-images/12.jpg" target="_blank" title="Projeto 12">
+              <img src="images/projects/thumb-images/thumb12.jpg" alt="Projeto 12" loading="lazy">
+              <span class="portfolio-hover"><i class="fa fa-search"></i> Projeto</span>
+            </a>
           </li>
         </ul>
+
+        <div class="portfolio-more-wrap">
+          <button id="portfolio-more" class="btn btn-ghost">Ver mais <i class="fa fa-chevron-down"></i></button>
+        </div>
       </div>
     </section>
-    <!--portfolio end-->
-    <section class="contact" id="contact">
-      <!--google map start-->
-      <div class="row mapArea">
-        <div id="map" style="width: 100%; height: 100%"></div>
-      </div>
-      <!--google map end-->
-    </section>
-    <section class="contactDetails">
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
       <div class="container">
         <div class="heading">
-          <h2>Onde me Econtrar</h2>
-          <h3>Especialista na criação de Apps Mobile (Android e IOs), Web Sites e e-commerce personalizados e
+          <p class="eyebrow">Vamos conversar</p>
+          <h2>Onde me encontrar</h2>
+          <h3>Especialista na criação de Apps Mobile (Android e iOS), Web Sites e e-commerce personalizados e
             gerenciáveis para você ou sua empresa. Ofereço as melhores soluções disponíveis no mercado.</h3>
-          <h2>Para maiores informações e Orçamento, chama no Zap!</h2>
         </div>
-    </section>
-    <!--contact end-->
-
-    <!--footer start-->
-    <section class="footer" id="footer">
-      <div class="container">
-        <ul>
-          <li><a href="https://www.instagram.com/eduardodeveloper/" target="_blank">
-            <i class="fa fa-instagram fa-2x"></i></a>
-          </li>
-          <li><a href="https://www.facebook.com/edutecnologo" target="_blank">
-            <i class="fa fa-facebook fa-2x"></i></a>
-          </li>
-          <li><a href="https://www.linkedin.com/in/eduardotecnologo" target="_blank">
-            <i class="fa fa-linkedin fa-2x"></i></a>
-          </li>
-          <li><a href="https://github.com/eduardotecnologo" target="_blank">
-              <i class="fa fa-github fa-2x"></i></a>
-          </li>
-          <a href="https://api.whatsapp.com/send?phone=5532987024149&text=Texto%20aqui"
-            target="_blank"
-            style="position:fixed;bottom:20px;right:30px;">
-            <svg enable-background="new 0 0 512 512" width="50" height="50" version="1.1" viewBox="0 0 512 512"
-              xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-              <path d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z" fill="#4CAF50"/>
-              <path d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"/>
-            </svg>
+        <div class="contact-grid">
+          <a class="contact-card" href="https://api.whatsapp.com/send?phone=5532987024149&text=Texto%20aqui" target="_blank">
+            <i class="fa fa-whatsapp fa-2x"></i>
+            <span>WhatsApp</span>
           </a>
-
-          <!-- Footer Certificações-->
-          <div>
-            <a href="https://www.credential.net/b2f4d35e-dc1a-4368-9205-29dfb276fc02" target="_blank">
-              <img style="width: 200px;" src="images/devops.png" alt="devops">
-            </a>
-            <a href="https://www.credential.net/ae543413-cb08-49f0-aae1-db07b5b39e00" target="_blank">
-              <img style="width: 175px;" src="images/agileExin.png" alt="Agile Scrum">
-            </a>
-            <a href="#">
-              <img style="width: 175px;" src="images/msPartner.jpeg" alt="Microsoft Partiner Network">
-            </a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:6799002872303370240/">
-              <img style="width: 210px;" src="images/Engenheiro-de-Software-Agil.png" alt="Engenheiro de Software IGTI">
-            </a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:6799002872303370240/">
-              <img style="width: 210px;" src="images/arquiteto.svg" alt="Engenheiro de Software IGTI">
-            </a>
-            <a href="#">
-              <img style="width: 210px;" src="images/Scrum-Foundation-Professional.png" alt="Scrum Foundation Professional Certifeld">
-            </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/eduardotecnologo" target="_blank">
+            <i class="fa fa-linkedin fa-2x"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a class="contact-card" href="https://github.com/eduardotecnologo" target="_blank">
+            <i class="fa fa-github fa-2x"></i>
+            <span>GitHub</span>
+          </a>
+          <div class="contact-card contact-card-static">
+            <i class="fa fa-map-marker fa-2x"></i>
+            <span>Juiz de Fora - MG, Brasil</span>
           </div>
+        </div>
       </div>
-      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+      <div class="container">
+        <ul class="social-list">
+          <li><a href="https://www.instagram.com/eduardodeveloper/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+          <li><a href="https://www.facebook.com/edutecnologo" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/eduardotecnologo" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+          <li><a href="https://github.com/eduardotecnologo" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+        </ul>
+
+        <div class="certifications">
+          <a href="https://www.credential.net/b2f4d35e-dc1a-4368-9205-29dfb276fc02" target="_blank">
+            <img src="images/devops.png" alt="DevOps">
+          </a>
+          <a href="https://www.credential.net/ae543413-cb08-49f0-aae1-db07b5b39e00" target="_blank">
+            <img src="images/agileExin.png" alt="Agile Scrum">
+          </a>
+          <a href="images/msPartner.jpeg" target="_blank">
+            <img src="images/msPartner.jpeg" alt="Microsoft Partner Network">
+          </a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:6799002872303370240/" target="_blank">
+            <img src="images/Engenheiro-de-Software-Agil.png" alt="Engenheiro de Software IGTI">
+          </a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:6799002872303370240/" target="_blank">
+            <img src="images/arquiteto.svg" alt="Arquiteto de Software IGTI">
+          </a>
+          <a href="images/Scrum-Foundation-Professional.png" target="_blank">
+            <img src="images/Scrum-Foundation-Professional.png" alt="Scrum Foundation Professional Certified">
+          </a>
+          <a href="images/AzureDevOps.png" target="_blank">
+            <img src="images/AzureDevOps.png" alt="Azure DevOps">
+          </a>
+        </div>
+
+        <p class="footer-copy">© <span id="year"></span> Eduardo Alexandre. Feito com café ☕ e muito código.</p>
+      </div>
+
+      <a href="https://api.whatsapp.com/send?phone=5532987024149&text=Texto%20aqui" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fa fa-whatsapp fa-2x"></i>
+      </a>
+      <a href="#wrapper" class="gototop" aria-label="Voltar ao topo"><i class="fa fa-chevron-up"></i></a>
+    </footer>
   </div>
 
-  <p class="text-center"><a href="#wrapper" class="gototop"><i class="fa fa-chevron-up fa-2"></i></a></p>
-  </section>
-  <!--footer end-->
-  </div>
-  <!--wrapper end-->
-
-  <!--modernizr js-->
-  <script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
-  <!--jquary min js-->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <!--for placeholder jquery-->
-  <script type="text/javascript" src="js/jquery.placeholder.js"></script>
-
-  <!--for header jquery-->
-  <script type="text/javascript" src="js/stickUp.js"></script>
-  <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    jQuery(function ($) {
-      $(document).ready(function () {
-        //enabling stickUp on the '.navbar-wrapper' class
-        $('.navbar-wrapper').stickUp({
-          parts: {
-            0: 'banner',
-            1: 'aboutus',
-            2: 'skillset',
-            3: 'experience',
-            4: 'education',
-            5: 'ourwork',
-            6: 'contact'
-          },
-          itemClass: 'menuItem',
-          itemHover: 'active',
-          topMargin: 'auto'
-        });
-      });
-
-
-    });
-  </script>
-  <script>
-    $('#banner').superslides({
-      animation: 'fade',
-      play: 5000
-    });
-  </script>
-
-  <!--for portfolio jquery-->
-  <script src="js/jquery.isotope.js" type="text/javascript"></script>
-  <link type="text/css" rel="stylesheet" id="theme" href="css/jquery-ui-1.8.16.custom.css">
-  <link type="text/css" rel="stylesheet" href="css/lightbox.min.css">
-  <script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
-  <script type="text/javascript" src="js/jquery.ui.rlightbox.js"></script>
-
-  <!--contact form js-->
-  <script type="text/javascript" src="js/jquery.contact.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-  <script type="text/javascript">
-    // When the window has finished loading create our google map below
-    google.maps.event.addDomListener(window, 'load', init);
-
-    function init() {
-      // Basic options for a simple Google Map
-      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-      var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 11,
-
-        // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(-21.76417, -43.35028), // Juiz de Fora
-        scrollwheel: false,
-        // How you would like to style the map.
-        // This is where you would paste any style found on Snazzy Maps.
-        styles: [{
-          "featureType": "water",
-          "elementType": "geometry",
-          "stylers": [{
-            "color": "#e9e9e9"
-          },
-          { "lightness": 17 }]
-        },
-        {
-          "featureType": "landscape",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#f5f5f5"
-            },
-            {
-              "lightness": 20
-            }]
-        },
-        {
-          "featureType": "road.highway",
-          "elementType": "geometry.fill",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 17
-            }]
-        },
-        {
-          "featureType": "road.highway",
-          "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 29
-            },
-            {
-              "weight": 0.2
-            }]
-        },
-        {
-          "featureType": "road.arterial",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-
-              "lightness": 18
-            }
-          ]
-        },
-        {
-          "featureType": "road.local",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 16
-            }]
-        },
-        {
-          "featureType": "poi",
-          "elementType": "geometry",
-          "stylers": [
-            {
-
-              "color": "#f5f5f5"
-            },
-            {
-              "lightness": 21
-            }]
-        },
-        {
-          "featureType": "poi.park",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#dedede"
-            }, {
-              "lightness": 21
-            }]
-        },
-        {
-          "elementType": "labels.text.stroke",
-          "stylers": [{
-            "visibility": "on"
-
-          },
-          {
-            "color": "#ffffff"
-          },
-          {
-            "lightness": 16
-          }]
-        },
-        {
-          "elementType": "labels.text.fill",
-          "stylers": [{
-            "saturation": 36
-          },
-          {
-            "color": "#333333"
-          },
-          {
-            "lightness": 40
-          }]
-        },
-        {
-          "elementType": "labels.icon",
-          "stylers": [{
-
-            "visibility": "off"
-          }]
-        },
-        {
-          "featureType": "transit",
-          "elementType": "geometry",
-          "stylers": [{
-            "color": "#f2f2f2"
-          },
-          {
-            "lightness": 19
-          }]
-        },
-        {
-          "featureType": "administrative",
-          "elementType": "geometry.fill",
-          "stylers": [
-            {
-              "color": "#fefefe"
-            },
-            {
-              "lightness": 20
-            }]
-        },
-        {
-          "featureType": "administrative",
-
-          "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#fefefe"
-            },
-            {
-              "lightness": 17
-            },
-            {
-              "weight": 1.2
-            }]
-        }]
-      };
-
-      // Get the HTML DOM element that will contain your map
-      // We are using a div with id="map" seen below in the <body>
-      var mapElement = document.getElementById('map');
-
-      // Create the Google Map using our element and options defined above
-      var map = new google.maps.Map(mapElement, mapOptions);
-
-
-
-      // Let's also add a marker while we're at it
-      var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.6700, -73.9400),
-        map: map,
-        title: 'Hello!'
-      });
-    }
-  </script>
-
-  <script src="js/jquery.easing.js"></script>
-  <script src="js/jquery.mousewheel.js"></script>
-  <script defer src="js/slideroption.js"></script>
-
-  <!--for theme custom jquery ------------>
   <script src="js/custom.js"></script>
 </body>
 </html>
